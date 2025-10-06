@@ -51,4 +51,3 @@ This pipeline provides structural and semantic understanding of Python code snip
 
 ---
 
-## 📂 Folder Structure
