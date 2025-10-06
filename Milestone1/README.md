@@ -39,7 +39,7 @@ This pipeline provides structural and semantic understanding of Python code snip
    - Illustrated the code structure for better interpretability.
 
 5. **Notebook Implementation**
-   - Final implementation is in `milestone1_final.ipynb`.
+   - Final implementation is in `Code.ipynb`.
 
 ---
 
