@@ -51,6 +51,7 @@ clean_generated_code() – Sanitizes model output by removing unwanted text form
 Together, these components enable an automated, multi-model benchmarking system that evaluates both performance and code quality.
 
 2. Interactive UI Components
+   
 2.1 Chatbot Interface
 
 The Interactive Chat App forms the core of this milestone. Built using ipywidgets, it integrates:
