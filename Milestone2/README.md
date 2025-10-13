@@ -89,6 +89,20 @@ Sample Benchmark (Illustrative):
 | Phi-2    | 2.3           | 7          | 75              | 51  |
 | Gemma    | 1.9           | 9          | 73              | 56  |
 
+5. Hugging Face Model Comparison and Best Model Selection
+
+This project includes a benchmarking module that compares multiple Hugging Face models—DeepSeek-Coder-1.3B, Phi-2-2.7B, and Gemma-2B-IT—on code generation tasks. Key performance metrics evaluated are:
+
+| Metric                    | Description                                             |
+| ------------------------- | ------------------------------------------------------- |
+| **Generation Time (s)**   | Time taken by the model to generate code from a prompt. |
+| **Cyclomatic Complexity** | Measures code complexity; lower is simpler.             |
+| **Maintainability Index** | Indicates ease of maintenance; higher is better.        |
+| **Lines of Code (LOC)**   | Number of lines generated.                              |
+
+
+A visual dashboard presents these metrics using interactive bar plots for easy comparison. Based on the analysis, DeepSeek-Coder-1.3B emerges as the best-performing model across key metrics, offering a balance of speed, maintainability, and complexity.
+
 **Results & Insights**
 
 The Chatbot effectively simulates conversational interactions.
