@@ -1,144 +1,104 @@
-🧩 Milestone 2 – Interactive Multi-Tool Application using ipywidgets
+
+🔹 Milestone 2 – Interactive Multi-Tool Application using ipywidgets
+
 Executive Summary
 
-This milestone extends the foundational concepts explored in Milestone 1 by developing a comprehensive, multi-functional interactive application in Python using ipywidgets.
-The project demonstrates how to combine frontend interactivity with backend logic to build a polished, user-friendly environment that integrates multiple tools:
+Milestone 2 enhances the initial pipeline by creating a modular, interactive Jupyter application that integrates frontend interactivity with backend analytics. Built using ipywidgets, it delivers an intuitive, user-centric environment combining conversational AI, file utilities, visual analytics, and AI benchmarking.
 
-A Chatbot Interface simulating real-time conversational AI,
+Core Modules:
 
-A File Inspector for handling and previewing user uploads, and
+Chatbot Interface: Simulates real-time conversations with intent recognition for Python and AI topics.
 
-An Interactive Data Plotter for dynamic data visualization.
+File Inspector: Enables secure uploads, metadata extraction, and live previews.
 
-In addition, this notebook incorporates AI code benchmarking using multiple Hugging Face models such as DeepSeek-Coder, Phi-2, and Gemma, integrating metrics like Cyclomatic Complexity, Maintainability Index, and Lines of Code for comparative analysis.
-Overall, Milestone 2 showcases both the interactive design capabilities of ipywidgets and the analytical depth of modern AI evaluation tools.
+Interactive Data Plotter: Generates dynamic charts with user-controlled options.
 
-1. Methodology
-1.1 Environment Setup
+AI Code Benchmarking Suite: Compares Hugging Face models (DeepSeek-Coder, Phi-2, Gemma) on code quality and performance metrics.
 
-The project begins by installing essential libraries:
+**Methodology**
 
-ipywidgets – for interactive UI elements,
+Environment Setup:
 
-transformers, torch, bitsandbytes – for AI model inference,
+| Library                           | Purpose                                    |
+| --------------------------------- | ------------------------------------------ |
+| ipywidgets                        | Interactive frontend components            |
+| transformers, torch, bitsandbytes | AI/LLM inference                           |
+| radon                             | Static code analysis (complexity, metrics) |
+| seaborn, matplotlib               | Visualization and analytics tools          |
 
-radon – for static code analysis,
 
-seaborn & matplotlib – for visualization and analytics.
-This ensures an integrated environment for developing, testing, and visualizing both AI and UI components.
+Hugging Face Model Integration:
 
-1.2 Hugging Face Integration
+| Model               | Provider/Path                            | Use Case        |
+| ------------------- | ---------------------------------------- | --------------- |
+| DeepSeek-Coder 1.3B | deepseek-ai/deepseek-coder-1.3b-instruct | Code generation |
+| Phi-2               | microsoft/phi-2                          | Code generation |
+| Gemma 2B IT         | google/gemma-2b-it                       | Code generation |
 
-Secure authentication is established via Hugging Face login, allowing access to gated models.
-Predefined model configurations load and benchmark three LLMs:
 
-deepseek-ai/deepseek-coder-1.3b-instruct
+All models are authenticated and GPU-optimized for efficient inference.
 
-microsoft/phi-2
+Backend Logic
 
-google/gemma-2b-it
-Each model is preloaded onto the GPU for optimized inference performance.
+| Function                       | Purpose                                     |
+| ------------------------------ | ------------------------------------------- |
+| `generate_code()`              | Produces Python code from natural prompts   |
+| `calculate_advanced_metrics()` | Computes complexity, maintainability, LOC   |
+| `clean_generated_code()`       | Removes formatting/artifacts from AI output |
 
-1.3 Backend Computation Engine
 
-Core functions include:
+**Interactive UI Features**
 
-generate_code() – Generates Python code based on input prompts.
-
-calculate_advanced_metrics() – Computes Cyclomatic Complexity, Maintainability Index, and Lines of Code using Radon.
-
-clean_generated_code() – Sanitizes model output by removing unwanted text formatting.
-Together, these components enable an automated, multi-model benchmarking system that evaluates both performance and code quality.
-
-2. Interactive UI Components
+1. Chatbot Interface:
    
-2.1 Chatbot Interface
+Real-time dialogue simulation with “Bot is typing…” feedback.
 
-The Interactive Chat App forms the core of this milestone. Built using ipywidgets, it integrates:
+Intent recognition for Python/AI queries.
 
-A styled header and chat history display area.
+Send and Clear buttons for easy interaction.
 
-A text input box, Send, and Clear buttons.
+2. File Inspector:
+   
+Displays file metadata, previews text up to 500 characters, and handles non-text binaries gracefully.
 
-Simulated “Bot is typing…” feedback for realism.
-The backend logic processes user input, identifies intent (e.g., greetings, programming questions), and generates appropriate responses using a rule-based system.
+| Feature          | Description                                  |
+| ---------------- | -------------------------------------------- |
+| Upload support   | Handles multiple file types                  |
+| Metadata display | Shows name, type, size                       |
+| Text preview     | Displays up to 500 characters for text files |
+| Binary handling  | Displays clear message for non-text files    |
 
-Key Highlights:
 
-Dynamic message rendering within the notebook.
+3. Interactive Data Plotter:
+   
+Users select chart type (Bar, Line, Scatter) and data size via sliders; plots update instantly for visual exploration.
 
-Support for queries about Python, AI, and coding syntax.
+4. Model Benchmarking Dashboard:
+   
+| UI Type             | Description                                                           |
+| ------------------- | --------------------------------------------------------------------- |
+| Run All Models      | Executes prompt on all models, shows summary                          |
+| Run Selected Models | User selects models to benchmark & compare                            |
+| Report Generator    | Aggregates metrics: Generation time, Complexity, Maintainability, LOC |
 
-Clean UI layout using VBox, HBox, and HTML widgets.
 
-2.2 File Inspector Tool
+Sample Benchmark (Illustrative):
+| Model    | Gen. Time (s) | Complexity | Maintainability | LOC |
+| -------- | ------------- | ---------- | --------------- | --- |
+| DeepSeek | 2.1           | 8          | 78              | 54  |
+| Phi-2    | 2.3           | 7          | 75              | 51  |
+| Gemma    | 1.9           | 9          | 73              | 56  |
 
-This tool allows users to upload and examine files directly from the notebook interface.
-Features include:
+**Results & Insights**
 
-Metadata extraction (file name, size, and type).
+The Chatbot effectively simulates conversational interactions.
 
-Real-time text preview (up to 500 characters).
+The File Inspector accurately previews and summarizes uploads.
 
-Binary file handling with informative messages.
+The Plotter enables real-time, user-driven analytics.
 
-It demonstrates real-world file management, emphasizing UI responsiveness and versatility across file types.
+The Benchmark Suite offers valuable insights into model performance and code quality.
 
-2.3 Interactive Data Plotter
+**Conclusion & Future Scope**
 
-This module integrates matplotlib and ipywidgets to create interactive visualizations.
-Users can select:
-
-Plot type: Bar, Line, or Scatter.
-
-Number of data points via a slider.
-The backend generates random data dynamically and renders the chosen visualization instantly, offering an intuitive way to explore data representation concepts.
-
-3. Multi-Model Benchmarking Dashboard
-
-Two UIs are implemented for benchmarking:
-
-UI #1 – Run All Models:
-Executes the same prompt across all preloaded models and displays a performance summary.
-
-UI #2 – Run Selected Models:
-Provides model-specific control via checkboxes for customized benchmarking.
-
-A final Report Generator aggregates results from all sessions, visualizing key metrics through bar charts (Generation Time, Complexity, Maintainability) using Seaborn.
-
-4. Implementation Workflow
-Step	Module	Description
-1	Setup	Install and import all libraries
-2	Login	Authenticate with Hugging Face
-3	Backend	Define helper and metric functions
-4	Load Models	Preload all selected models
-5	UI #1	Benchmark across all models
-6	UI #2	Run tests on selected models
-7	Report	Generate visual analytics
-8	Cleanup	Free GPU memory manually
-5. Results & Observations
-
-The Chatbot App successfully mimics conversational flow with a smooth and responsive interface.
-
-The File Inspector accurately retrieves file details and previews textual content.
-
-The Data Plotter provides flexible, real-time plotting for varied datasets.
-
-The AI Benchmark Suite performs efficient, multi-model evaluations, generating quantifiable code metrics and comparative visual reports.
-
-Overall, the project demonstrates a seamless blend of interactivity, analytics, and AI-driven insights.
-
-6. Conclusion & Future Scope
-
-This milestone solidifies practical expertise in creating multi-tab, modular applications using ipywidgets while incorporating AI benchmarking workflows.
-It bridges the gap between user interface design and intelligent backend computation, exemplifying the power of interactive notebooks for real-world applications.
-
-Future Enhancements:
-
-Integrate LLM-based conversational models (e.g., GPT, LLaMA) for a smarter chatbot.
-
-Extend data plotting with file-based CSV inputs.
-
-Add a user session manager to log interaction history.
-
-Deploy as a Streamlit or Gradio web app for accessibility beyond Jupyter.
+This milestone demonstrates how ipywidgets can unify interactive UI and analytical workflows within a single Jupyter environment—bridging intuitive design with analytical depth for real-world data science tasks.
