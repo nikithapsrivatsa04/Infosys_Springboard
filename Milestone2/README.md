@@ -100,6 +100,9 @@ This project includes a benchmarking module that compares multiple Hugging Face 
 | **Maintainability Index** | Indicates ease of maintenance; higher is better.        |
 | **Lines of Code (LOC)**   | Number of lines generated.                              |
 
+<img width="1984" height="571" alt="image" src="https://github.com/user-attachments/assets/ebfb7a2a-f410-4c2f-854e-d4b33fbb220c" />
+
+
 
 A visual dashboard presents these metrics using interactive bar plots for easy comparison. Based on the analysis, DeepSeek-Coder-1.3B emerges as the best-performing model across key metrics, offering a balance of speed, maintainability, and complexity.
 
