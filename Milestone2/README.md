@@ -89,6 +89,9 @@ Sample Benchmark (Illustrative):
 | Phi-2    | 2.3           | 7          | 75              | 51  |
 | Gemma    | 1.9           | 9          | 73              | 56  |
 
+<img width="1984" height="571" alt="image" src="https://github.com/user-attachments/assets/06689c72-43b8-4364-921f-997401ce4709" />
+
+
 5. Hugging Face Model Comparison and Best Model Selection
 
 This project includes a benchmarking module that compares multiple Hugging Face models—DeepSeek-Coder-1.3B, Phi-2-2.7B, and Gemma-2B-IT—on code generation tasks. Key performance metrics evaluated are:
