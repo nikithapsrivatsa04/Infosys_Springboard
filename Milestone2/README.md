@@ -15,6 +15,7 @@ AI Code Benchmarking Suite – Compares Hugging Face models (DeepSeek-Coder, Phi
 <img width="617" height="619" alt="Screenshot (135)" src="https://github.com/user-attachments/assets/5041c8ef-c3fc-497e-8f52-39292131f3bd" />
 
 
+
 **Chatbot Interface (Detailed Overview)**
 
 The Chatbot Interface serves as the conversational entry point of the Interactive Multi-Tool Application. Built entirely with ipywidgets, it provides a seamless and responsive dialogue experience inside the Jupyter environment.
