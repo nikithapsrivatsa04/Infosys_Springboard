@@ -1,6 +1,6 @@
 # **🔹 Milestone 2 – Interactive Multi-Tool Application using ipywidgets**
 
-## Milestone 2 enhances the initial pipeline by creating a modular, interactive Jupyter application that integrates frontend interactivity with backend analytics. Built using ipywidgets, it delivers an intuitive, user-centric environment combining   conversational AI, file utilities, visual analytics, and AI benchmarking.
+### Milestone 2 enhances the initial pipeline by creating a modular, interactive Jupyter application that integrates frontend interactivity with backend analytics. Built using ipywidgets, it delivers an intuitive, user-centric environment combining   conversational AI, file utilities, visual analytics, and AI benchmarking.
 
 **Core Modules**
 
