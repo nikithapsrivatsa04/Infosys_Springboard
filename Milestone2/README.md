@@ -1,23 +1,68 @@
-
 🔹 Milestone 2 – Interactive Multi-Tool Application using ipywidgets
-
-
 
 Milestone 2 enhances the initial pipeline by creating a modular, interactive Jupyter application that integrates frontend interactivity with backend analytics. Built using ipywidgets, it delivers an intuitive, user-centric environment combining conversational AI, file utilities, visual analytics, and AI benchmarking.
 
-Core Modules:
+**Core Modules**
 
-Chatbot Interface: Simulates real-time conversations with intent recognition for Python and AI topics.
+Chatbot Interface – Simulates real-time conversations with intent recognition for Python and AI topics.
 
-File Inspector: Enables secure uploads, metadata extraction, and live previews.
+File Inspector – Enables secure uploads, metadata extraction, and live previews.
 
-Interactive Data Plotter: Generates dynamic charts with user-controlled options.
+Interactive Data Plotter – Generates dynamic charts with user-controlled options.
 
-AI Code Benchmarking Suite: Compares Hugging Face models (DeepSeek-Coder, Phi-2, Gemma) on code quality and performance metrics.
+AI Code Benchmarking Suite – Compares Hugging Face models (DeepSeek-Coder, Phi-2, Gemma) on code quality and performance metrics.
+
+**Chatbot Interface (Detailed Overview)**
+
+The Chatbot Interface serves as the conversational entry point of the Interactive Multi-Tool Application. Built entirely with ipywidgets, it provides a seamless and responsive dialogue experience inside the Jupyter environment.
+
+Key Features
+
+| Feature                   | Description                                                                                          |
+| ------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Real-Time Interaction** | Users can chat with the bot using a clean text area and intuitive “Send” and “Clear” buttons.        |
+| **Typing Simulation**     | Displays a “Bot is typing…” animation to mimic real-time conversation flow.                          |
+| **Intent Recognition**    | Detects keywords and phrases related to Python, AI, Machine Learning, and coding concepts.           |
+| **Dynamic Responses**     | Generates context-aware replies about Python syntax, loops, data structures, and AI/ML fundamentals. |
+| **Error Handling**        | Default responses guide the user to rephrase or explore supported topics.                            |
+| **Scrollable History**    | The conversation area automatically updates without freezing, maintaining all previous messages.     |
+| **Fully Styled Layout**   | Utilizes `VBox`, `HBox`, and `HTML` widgets for header, borders, color themes, and spacing.          |
+
+**UI Design**
+
+Header: A stylized title banner using HTML for a clean interface.
+
+Chat Window: Scrollable Output widget to display user and bot messages with alternating background colors.
+
+Input Bar: Combines a Textarea, “Send” button, and “Clear” button horizontally using HBox.
+
+Layout Styling: Controlled through widgets.Layout properties for consistent sizing, padding, and borders.
+
+**Backend Logic**
+
+get_bot_reply() and get_bot_response() handle input processing and keyword-based reply generation.
+
+Event handlers (on_send_button_clicked, on_clear_button_clicked) manage user actions and chat updates.
+
+Built-in delay (time.sleep(1)) creates natural “typing” feedback for smoother interaction.
+
+Example Queries
+
+| User Input             | Bot Response                                                   |
+| ---------------------- | -------------------------------------------------------------- |
+| “Hello”                | “Hello there! How can I help you today?”                       |
+| “Explain Python loops” | “Loops repeat actions. Example: `for i in range(5): print(i)`” |
+| “Tell me about AI”     | “AI is the simulation of human intelligence by machines...”    |
+
+**Extensibility**
+
+Can be integrated with real NLP or LLM APIs (OpenAI, Hugging Face) for intelligent conversation.
+
+Supports adding new intents or command patterns for extended functionality.
 
 **Methodology**
 
-Environment Setup:
+Environment Setup
 
 | Library                           | Purpose                                    |
 | --------------------------------- | ------------------------------------------ |
@@ -27,7 +72,7 @@ Environment Setup:
 | seaborn, matplotlib               | Visualization and analytics tools          |
 
 
-Hugging Face Model Integration:
+**Hugging Face Model Integration**
 
 | Model               | Provider/Path                            | Use Case        |
 | ------------------- | ---------------------------------------- | --------------- |
@@ -38,7 +83,7 @@ Hugging Face Model Integration:
 
 All models are authenticated and GPU-optimized for efficient inference.
 
-Backend Logic
+**Backend Logic Functions**
 
 | Function                       | Purpose                                     |
 | ------------------------------ | ------------------------------------------- |
@@ -46,20 +91,13 @@ Backend Logic
 | `calculate_advanced_metrics()` | Computes complexity, maintainability, LOC   |
 | `clean_generated_code()`       | Removes formatting/artifacts from AI output |
 
-
-**Interactive UI Features**
-
-1. Chatbot Interface:
-   
 Real-time dialogue simulation with “Bot is typing…” feedback.
 
 Intent recognition for Python/AI queries.
 
 Send and Clear buttons for easy interaction.
 
-2. File Inspector:
-   
-Displays file metadata, previews text up to 500 characters, and handles non-text binaries gracefully.
+**File Inspector**
 
 | Feature          | Description                                  |
 | ---------------- | -------------------------------------------- |
@@ -68,57 +106,47 @@ Displays file metadata, previews text up to 500 characters, and handles non-text
 | Text preview     | Displays up to 500 characters for text files |
 | Binary handling  | Displays clear message for non-text files    |
 
+Users select chart type (Bar, Line, Scatter) and data size via sliders.
 
-3. Interactive Data Plotter:
-   
-Users select chart type (Bar, Line, Scatter) and data size via sliders; plots update instantly for visual exploration.
+Plots update instantly for visual exploration.
 
-4. Model Benchmarking Dashboard:
-   
+**AI Model Benchmarking Dashboard**
+
 | UI Type             | Description                                                           |
 | ------------------- | --------------------------------------------------------------------- |
-| Run All Models      | Executes prompt on all models, shows summary                          |
+| Run All Models      | Executes prompt on all models and shows summary                       |
 | Run Selected Models | User selects models to benchmark & compare                            |
 | Report Generator    | Aggregates metrics: Generation time, Complexity, Maintainability, LOC |
 
+Sample Benchmark (Illustrative)
 
-Sample Benchmark (Illustrative):
 | Model    | Gen. Time (s) | Complexity | Maintainability | LOC |
 | -------- | ------------- | ---------- | --------------- | --- |
 | DeepSeek | 2.1           | 8          | 78              | 54  |
 | Phi-2    | 2.3           | 7          | 75              | 51  |
 | Gemma    | 1.9           | 9          | 73              | 56  |
 
-<img width="1984" height="571" alt="image" src="https://github.com/user-attachments/assets/06689c72-43b8-4364-921f-997401ce4709" />
 
-
-5. Hugging Face Model Comparison and Best Model Selection
-
-This project includes a benchmarking module that compares multiple Hugging Face models—DeepSeek-Coder-1.3B, Phi-2-2.7B, and Gemma-2B-IT—on code generation tasks. Key performance metrics evaluated are:
-
-| Metric                    | Description                                             |
-| ------------------------- | ------------------------------------------------------- |
-| **Generation Time (s)**   | Time taken by the model to generate code from a prompt. |
-| **Cyclomatic Complexity** | Measures code complexity; lower is simpler.             |
-| **Maintainability Index** | Indicates ease of maintenance; higher is better.        |
-| **Lines of Code (LOC)**   | Number of lines generated.                              |
-
-<img width="1984" height="571" alt="image" src="https://github.com/user-attachments/assets/ebfb7a2a-f410-4c2f-854e-d4b33fbb220c" />
-
-
-
-A visual dashboard presents these metrics using interactive bar plots for easy comparison. Based on the analysis, DeepSeek-Coder-1.3B emerges as the best-performing model across key metrics, offering a balance of speed, maintainability, and complexity.
+Insight: DeepSeek-Coder-1.3B offers the best balance of speed, maintainability, and complexity.
 
 **Results & Insights**
 
-The Chatbot effectively simulates conversational interactions.
+Chatbot effectively simulates conversational interactions.
 
-The File Inspector accurately previews and summarizes uploads.
+File Inspector accurately previews and summarizes uploads.
 
-The Plotter enables real-time, user-driven analytics.
+Plotter enables real-time, user-driven analytics.
 
-The Benchmark Suite offers valuable insights into model performance and code quality.
+Benchmark Suite offers valuable insights into model performance and code quality.
 
 **Conclusion & Future Scope**
 
 This milestone demonstrates how ipywidgets can unify interactive UI and analytical workflows within a single Jupyter environment—bridging intuitive design with analytical depth for real-world data science tasks.
+
+**Future Enhancements:**
+
+Integrate real-time LLM APIs for smarter conversational AI.
+
+Add more advanced data visualization types and filtering options.
+
+Extend the benchmarking suite with additional models and metrics.
