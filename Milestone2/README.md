@@ -54,6 +54,9 @@ Example Queries
 | “Explain Python loops” | “Loops repeat actions. Example: `for i in range(5): print(i)`” |
 | “Tell me about AI”     | “AI is the simulation of human intelligence by machines...”    |
 
+<img width="1757" height="538" alt="Screenshot (134)" src="https://github.com/user-attachments/assets/0ac65836-b50f-44e4-ae53-782b7aad20f1" />
+
+
 **Extensibility**
 
 Can be integrated with real NLP or LLM APIs (OpenAI, Hugging Face) for intelligent conversation.
@@ -79,6 +82,8 @@ Environment Setup
 | DeepSeek-Coder 1.3B | deepseek-ai/deepseek-coder-1.3b-instruct | Code generation |
 | Phi-2               | microsoft/phi-2                          | Code generation |
 | Gemma 2B IT         | google/gemma-2b-it                       | Code generation |
+
+<img width="1984" height="571" alt="image" src="https://github.com/user-attachments/assets/e6b78994-631f-44f5-8587-1e9b62315133" />
 
 
 All models are authenticated and GPU-optimized for efficient inference.
@@ -125,6 +130,8 @@ Sample Benchmark (Illustrative)
 | DeepSeek | 2.1           | 8          | 78              | 54  |
 | Phi-2    | 2.3           | 7          | 75              | 51  |
 | Gemma    | 1.9           | 9          | 73              | 56  |
+
+<img width="1984" height="571" alt="image" src="https://github.com/user-attachments/assets/a693ea51-dbb8-4c39-aba3-e847e0ff361d" />
 
 
 Insight: DeepSeek-Coder-1.3B offers the best balance of speed, maintainability, and complexity.
