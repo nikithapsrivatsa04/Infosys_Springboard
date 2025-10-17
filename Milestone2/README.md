@@ -2,7 +2,7 @@
 
 ### Milestone 2 enhances the initial pipeline by creating a modular, interactive Jupyter application that integrates frontend interactivity with backend analytics. Built using ipywidgets, it delivers an intuitive, user-centric environment combining   conversational AI, file utilities, visual analytics, and AI benchmarking.
 
-**Core Modules**
+#### **Core Modules**
 
 Chatbot Interface – Simulates real-time conversations with intent recognition for Python and AI topics.
 
@@ -16,7 +16,7 @@ AI Code Benchmarking Suite – Compares Hugging Face models (DeepSeek-Coder, Phi
 
 
 
-**Chatbot Interface (Detailed Overview)**
+#### **Chatbot Interface (Detailed Overview)**
 
 The Chatbot Interface serves as the conversational entry point of the Interactive Multi-Tool Application. Built entirely with ipywidgets, it provides a seamless and responsive dialogue experience inside the Jupyter environment.
 
@@ -33,7 +33,7 @@ Key Features
 | **Scrollable History**    | The conversation area automatically updates without freezing, maintaining all previous messages.     |
 | **Fully Styled Layout**   | Utilizes `VBox`, `HBox`, and `HTML` widgets for header, borders, color themes, and spacing.          |
 
-**UI Design**
+#### **UI Design**
 
 Header: A stylized title banner using HTML for a clean interface.
 
@@ -43,7 +43,7 @@ Input Bar: Combines a Textarea, “Send” button, and “Clear” button horizo
 
 Layout Styling: Controlled through widgets.Layout properties for consistent sizing, padding, and borders.
 
-**Backend Logic**
+#### **Backend Logic**
 
 get_bot_reply() and get_bot_response() handle input processing and keyword-based reply generation.
 
@@ -62,13 +62,13 @@ Example Queries
 <img width="1757" height="538" alt="Screenshot (134)" src="https://github.com/user-attachments/assets/0ac65836-b50f-44e4-ae53-782b7aad20f1" />
 
 
-**Extensibility**
+#### **Extensibility**
 
 Can be integrated with real NLP or LLM APIs (OpenAI, Hugging Face) for intelligent conversation.
 
 Supports adding new intents or command patterns for extended functionality.
 
-**Methodology**
+#### **Methodology**
 
 Environment Setup
 
@@ -80,7 +80,7 @@ Environment Setup
 | seaborn, matplotlib               | Visualization and analytics tools          |
 
 
-**Hugging Face Model Integration**
+#### **Hugging Face Model Integration**
 
 | Model               | Provider/Path                            | Use Case        |
 | ------------------- | ---------------------------------------- | --------------- |
@@ -93,7 +93,7 @@ Environment Setup
 
 All models are authenticated and GPU-optimized for efficient inference.
 
-**Backend Logic Functions**
+#### **Backend Logic Functions**
 
 | Function                       | Purpose                                     |
 | ------------------------------ | ------------------------------------------- |
@@ -107,7 +107,7 @@ Intent recognition for Python/AI queries.
 
 Send and Clear buttons for easy interaction.
 
-**File Inspector**
+#### **File Inspector**
 
 | Feature          | Description                                  |
 | ---------------- | -------------------------------------------- |
@@ -120,7 +120,7 @@ Users select chart type (Bar, Line, Scatter) and data size via sliders.
 
 Plots update instantly for visual exploration.
 
-**AI Model Benchmarking Dashboard**
+#### **AI Model Benchmarking Dashboard**
 
 | UI Type             | Description                                                           |
 | ------------------- | --------------------------------------------------------------------- |
@@ -141,7 +141,7 @@ Sample Benchmark (Illustrative)
 
 Insight: DeepSeek-Coder-1.3B offers the best balance of speed, maintainability, and complexity.
 
-**Results & Insights**
+#### **Results & Insights**
 
 Chatbot effectively simulates conversational interactions.
 
@@ -151,11 +151,11 @@ Plotter enables real-time, user-driven analytics.
 
 Benchmark Suite offers valuable insights into model performance and code quality.
 
-**Conclusion & Future Scope**
+#### **Conclusion & Future Scope**
 
 This milestone demonstrates how ipywidgets can unify interactive UI and analytical workflows within a single Jupyter environment—bridging intuitive design with analytical depth for real-world data science tasks.
 
-**Future Enhancements:**
+#### **Future Enhancements:**
 
 Integrate real-time LLM APIs for smarter conversational AI.
 
