@@ -214,3 +214,9 @@ Secure & scalable user management
 Insightful analytics and monitoring
 
 It empowers students, educators, and developers with a robust next-generation AI coding ecosystem.
+
+
+📽 Demo Video
+
+Watch the project demo here:
+👉 https://drive.google.com/file/d/1mtrmlc1ouGJ4K7M5yiGghkx9IHeG_yps/view
