@@ -215,9 +215,6 @@ Insightful analytics and monitoring
 
 It empowers students, educators, and developers with a robust next-generation AI coding ecosystem.
 
-**Output:**
-
-https://fossilisable-errol-arboresque.ngrok-free.dev/
 
 
 📽 Demo Video
